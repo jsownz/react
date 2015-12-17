@@ -1,0 +1,24 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "Simple web server",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsownz/react.git"
+  },
+  "author": "Jason Sohl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsownz/react/issues"
+  },
+  "homepage": "https://github.com/jsownz/react#readme"
+}
