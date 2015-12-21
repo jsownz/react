@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reg Form</title>
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://fb.me/react-0.14.3.js"></script>
+  <script src="https://fb.me/react-dom-0.14.3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <h1 class="page-header">Register</h1>
+        <div id="regForm"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/babel">
+    var RegForm = React.createClass({
+      register: function(e){
+        e.preventDefault();
+        var firstName   = this.refs.firstName.value.trim(),
+            lastName    = this.refs.lastName.value.trim(),
+            email       = this.refs.email.value.trim();
+
+        alert(firstName+" "+lastName+" "+email);
+
+        if (!firstName || !lastName || !email) {
+          return;
+        }
+
+        this.refs.firstName.value = "";
+        this.refs.lastName.value = "";
+        this.refs.email.value = "";
+      },
+      render: function(){
+        return (
+          <div>
+            <form onSubmit={this.register}>
+              <div className="form-group">
+                <label htmlFor="firstName">First Name: </label>
+                <input type="text" className="form-control" placeholder="First Name" ref="firstName" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="lastName">Last Name: </label>
+                <input type="text" className="form-control" placeholder="Last Name" ref="lastName" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">Email: </label>
+                <input type="email" className="form-control" placeholder="Email Address" ref="email" />
+              </div>
+
+              <input className="btn btn-primary" type="submit" value="Submit" />
+            </form>
+          </div>
+          );
+      }
+    });
+
+    ReactDOM.render(
+        <RegForm />,
+        document.getElementById("regForm")
+      );
+  </script>
+  
+</body>
+</html>
