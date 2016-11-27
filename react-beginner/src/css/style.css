@@ -1,4 +1,4 @@
-.order-enter {
+/*.order-enter {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   -webkit-transform: translateX(-120%);
@@ -46,7 +46,7 @@
 .count-leave.count-leave-active {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
-}
+}*/
 @font-face {
   font-family: "haymakerregular";
   src: url("./fonts/haymaker-webfont.eot");

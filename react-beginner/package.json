@@ -6,12 +6,17 @@
     "react-scripts": "0.7.0"
   },
   "dependencies": {
-    "react": "^15.4.0",
+    "concurrently": "^3.1.0",
+    "re-base": "^2.3.3",
+    "react": "^15.4.1",
+    "react-addons-css-transition-group": "^15.4.1",
     "react-dom": "^15.4.0",
     "react-router": "^4.0.0-2"
   },
   "scripts": {
     "start": "react-scripts start",
+    "watch": "concurrently --names 'webpack, sass' --prefix name 'npm run start' 'npm run styles:watch'",
+    "styles:watch": "node-sass --watch './src/css/sass/' --output './src/css/'",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

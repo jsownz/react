@@ -1,0 +1,41 @@
+
+.order-enter {
+  transition: all 500ms;
+  transform: translate3d(-120%,0,0);
+  max-height: 0;
+  padding: 0 !important;
+  &.order-enter-active {
+    transform: translate3d(0,0,0);
+    max-height: 60px;
+    padding: 2rem 0 !important;
+  }
+}
+.order-leave {
+  transition: all 500ms;
+  transform: translate3d(0,0,0);
+  max-height: 60px;
+  padding: 2rem 0 !important;
+  &.order-leave-active {
+    transform: translate3d(-120%,0,0);
+    max-height: 0;
+    padding: 0 !important;
+  }
+}
+
+.count-enter {
+  transition: all 250ms;
+  transform: translate3d(0, 100%, 0);
+  &.count-enter-active {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.count-leave {
+  transition: all 250ms;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate3d(0, 0, 0);
+  &.count-leave-active {
+    transform: translate3d(0, -100%, 0);
+  }
+}
